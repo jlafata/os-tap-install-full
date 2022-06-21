@@ -11,9 +11,9 @@ This github repository contains instructions and files required to install the f
 1. Apply SCC's Roles and Role Bindings [scc folder](scc)
 1. Install Cluster Essentials (execute `./install-cluster-essentials.sh <environment>`, where environment = linux|darwin)
 1. cp values-example.yaml and configure appropriately for your environment
-1. Install App Accelerator (execute `install.sh` using the profile specified in tap-values.yaml and values.yaml in the [profile](profile) folder )
+1. Install Tanzu Application Platform (execute `install.sh` using the profile specified in tap-values.yaml and values.yaml in the [profile](profile) folder )
 
-## SCC folder, roles and role bindings: restrictive SCC's to run the app accelerators
-The contents of the folder scc were derived from the security context of the deployments for the application accelerator on openshift 4.10.9 
+## SCC folder, roles and role bindings: restrictive SCC's to run Tanzu Application Platform
+The contents of the folder scc were derived from the security context of the deployments for Tanzu Application Platform on openshift 4.10.9 
 
-## profile folder, profile and configuration values used to install the App Accelerator
+## profile folder, profile and configuration values used to install Tanzu Application Platform
