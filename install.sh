@@ -10,7 +10,7 @@ script_dir="$(cd $(dirname "$BASH_SOURCE[0]") && pwd)"
 generated_dir="${script_dir}/generated"
 mkdir -p "${generated_dir}"
 
-values_file_default="${script_dir}/values.yaml"
+values_file_default="${script_dir}/profile/values.yaml"
 values_file=${VALUES_FILE:-$values_file_default}
 
 export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
@@ -45,7 +45,7 @@ tanzu package repository \
   --namespace tap-install \
   get tanzu-tap-repository
 
-ytt -f "${script_dir}/tap-values.yaml" -f "${values_file}" --ignore-unknown-comments > "${generated_dir}/tap-values.yaml"
+ytt -f "${script_dir}/profile/tap-values.yaml" -f "${values_file}" --ignore-unknown-comments > "${generated_dir}/tap-values.yaml"
 
 tanzu package install tap \
   --namespace tap-install \
